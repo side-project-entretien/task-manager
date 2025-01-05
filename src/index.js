@@ -17,7 +17,7 @@ axios.defaults.baseURL = 'http://localhost:3001';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-      <ToastContainer />
+      <ToastContainer autoClose={2000}  />
         <App />
     </BrowserRouter>
 );
