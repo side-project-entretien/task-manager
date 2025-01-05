@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <Box sx={{ marginTop: 5 }}>
+      <Box sx={{ marginY: 5 }}>
         <Router />
       </Box>
     </div>

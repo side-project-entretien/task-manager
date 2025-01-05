@@ -6,6 +6,7 @@ import { Link, useSearchParams } from 'react-router';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import StatusFilterInput from '../components/inputs/StatusFilterInput';
 import SearchFilterInput from '../components/inputs/SearchFilterInput';
+import dayjs from 'dayjs';
 
 function HomePage() {
 
@@ -19,7 +20,9 @@ function HomePage() {
         startTransition(async () => {
             try {
                 const response = await axios.get('/tasks?' + searchParams.toString());
-                setTasks(response.data);
+                setTasks(
+                    response.data.sort((a: any, b: any) => dayjs(b.created_at).valueOf() - dayjs(a.created_at).valueOf())
+                );
             } catch (error) {
                 console.error("Erreur lors du chargement des tâches :", error);
             }
@@ -53,6 +56,7 @@ function HomePage() {
                     {isPending ? <CircularProgress color="secondary" /> : tasks.map((task: any, i: number) =>
                         <TaskCard key={i} task={task} onRemove={(taskId: string) => onRemove(taskId)} />
                     )}
+                    {!tasks.length && <Typography>Pas de tâches</Typography>}
                 </Stack>
             </Container>
         </Box>

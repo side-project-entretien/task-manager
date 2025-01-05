@@ -78,6 +78,7 @@ const FormPage: React.FC = () => {
 
     useEffect(() => {
         fetchTask()
+        console.log(status)
     }, [])
 
 
@@ -117,7 +118,7 @@ const FormPage: React.FC = () => {
                                     labelId="demo-simple-select-label"
                                     id="status"
                                     name="status"
-                                    value={status}
+                                    defaultValue={task.status}
                                     label="Status"
                                     onChange={(e: any) => {
                                         setStatus(e.target.value);
