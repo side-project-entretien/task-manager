@@ -25,12 +25,12 @@ const StatusFilterInput = () => {
                 labelId="status-select-label"
                 id="status"
                 name="status"
-                value={statusParams} // Valeur par défaut : ''
+                value={statusParams}
                 label="Status"
                 onChange={(e) => {
                     const newValue = e.target.value;
-                    setStatusParams(newValue); // Met à jour l'état local
-                    updateFilter(newValue); // Met à jour les paramètres d'URL
+                    setStatusParams(newValue);
+                    updateFilter(newValue);
                 }}
             >
                 <MenuItem value="">Tous</MenuItem>
