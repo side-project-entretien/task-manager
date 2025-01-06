@@ -36,12 +36,10 @@ Créer une application web de gestion des tâches utilisant React. Ce projet doi
 2. **Style :**
     * Utiliser Tailwind CSS ou un système de styles au choix (styled-components, Sass, etc.).
     * L’interface doit être responsive.
-3. **Tests :**
-    * Ajouter des tests unitaires avec **Jest** et des tests de composants avec **React Testing Library.**
-4. **API :**
+3. **API :**
     * Simuler une API REST avec json-server ou Mock Service Worker (MSW) pour gérer les tâches.
     * Les actions CRUD (Create, Read, Update, Delete) doivent être faites via cette API.
-5. **Bonus :**
+4. **Bonus :**
     * Utiliser TypeScript pour typer le projet.
     * Ajouter un système de notifications (par exemple, pour confirmer l’ajout ou la suppression d’une tâche).
 ## Livrable attendu :
